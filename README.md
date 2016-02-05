@@ -19,8 +19,7 @@ compile 'com.github.dubulee:coordinatorlayouthelper:0.1.2'
 
 ScreenShot
 ------
-![ScreenShot](art/coordinatorlayouthelperscreenshot.gif)
-
+<img src="art/coordinatorlayouthelperscreenshot.gif" width="500">
 How to Use
 ------
 Using the library is really simple.
