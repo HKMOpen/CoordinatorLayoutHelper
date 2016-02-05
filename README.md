@@ -1,3 +1,4 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-CoordinatorLayoutHelper-green.svg?style=true)](https://android-arsenal.com/details/1/3101)
 # CoordinatorLayoutHelper
 android custom coordinator layout behavior library and sample
 
@@ -17,7 +18,7 @@ compile 'com.github.dubulee:coordinatorlayouthelper:0.1.2'
 
 ScreenShot
 ------
-![ScreenShot](art/coordinatorlayouthelperscreenshot.gif)!
+![ScreenShot](art/coordinatorlayouthelperscreenshot.gif)
 
 How to Use
 ------
