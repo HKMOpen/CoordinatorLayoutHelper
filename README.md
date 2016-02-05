@@ -25,7 +25,23 @@ How to Use
 ------
 Using the library is really simple.
 
-I will ~~~ Update ~~~~~~ ~~~ 
+See MainActivity.java (app/src/main/java/com/github/dubulee/coordinatorlayouthelpersample/MainActivity.java)
+
+First, Create HeaderLayout 
+
+````java
+HeaderLayout headerLayout = (HeaderLayout) findViewById(R.id.header_layout);
+````
+
+Second, Create CoordinatorLayoutHelperViewPager
+````java
+CoordinatorLayoutHelperViewPager viewPager = (CoordinatorLayoutHelperViewPager) findViewById(R.id.viewpager);
+````
+
+Third, Set Scroll Range
+````java
+headerLayout.setFixedScrollRange(HEIGHT);
+````
 
 Welcome the pull request
 -------------------------
