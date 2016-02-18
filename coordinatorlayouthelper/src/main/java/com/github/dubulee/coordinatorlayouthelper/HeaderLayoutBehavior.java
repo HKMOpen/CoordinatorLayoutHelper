@@ -2,8 +2,10 @@ package com.github.dubulee.coordinatorlayouthelper;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ScrollingView;
 import android.support.v4.view.ViewCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v4.widget.ScrollerCompat;
 import android.util.AttributeSet;
@@ -119,11 +121,9 @@ public class HeaderLayoutBehavior<V extends View> extends ViewOffsetBehavior<Hea
         if (coordinatorLayout.getChildAt(mScrollRootViewPosition) instanceof CoordinatorLayoutHelperViewPager) {
             mViewPager = (CoordinatorLayoutHelperViewPager) coordinatorLayout.getChildAt(mScrollRootViewPosition);
         }
-        else {
-            mViewPager = null;
-        }
 
-        findHeaderLayout(rootViewGroup);
+
+        findHeaderLayout(mViewPager);
 
 
 //        if (null != rootViewGroup) {
@@ -137,12 +137,20 @@ public class HeaderLayoutBehavior<V extends View> extends ViewOffsetBehavior<Hea
 //        }
     }
 
-    private void findHeaderLayout(ViewGroup rootViewGroup) {
+    private void findHeaderLayout(ViewPager rootViewGroup) {
+        //TODO
+        if (null == rootViewGroup) {
+            throw new NullPointerException();
+        }
+
         if (null != mScrollViewList && mScrollViewList.size() > 0) {
             mScrollViewList.clear();
         }
-        for (int z = 0; z < rootViewGroup.getChildCount(); z++) {
-            View view = (View) rootViewGroup.getChildAt(z);
+
+        for (int z = 0; z < rootViewGroup.getAdapter().getCount(); z++) {
+            FragmentPagerAdapter pa = (FragmentPagerAdapter) rootViewGroup.getAdapter();
+            android.support.v4.app.Fragment fragment = pa.getItem((rootViewGroup.getCurrentItem()));
+            View view = fragment.getView();
             if (view instanceof CoordinatorLayoutHelperRecyclerView) {
                 mScrollViewList.add(((CoordinatorLayoutHelperRecyclerView) rootViewGroup.getChildAt(z)));
             }

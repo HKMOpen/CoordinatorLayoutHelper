@@ -18,23 +18,10 @@ import java.util.List;
 
 public class MainActivity extends FragmentActivity {
     private final int CONTENTS_VIEW_POSITION = 1;
-    private final int SCROLL_VIEW_POSITION = 0;
-
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        System.out.println(ANSI_RED + "This text is red!" + ANSI_RESET);
-
 
         setContentView(R.layout.activity_main);
         
@@ -58,6 +45,11 @@ public class MainActivity extends FragmentActivity {
         final PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
         pagerAdapter.addFragment(ListViewPageFragment.createInstance(), "List View");
         pagerAdapter.addFragment(GridViewPageFragment.createInstance(), "Grid View");
+        pagerAdapter.addFragment(ListViewPageFragment.createInstance(), "List View");
+        pagerAdapter.addFragment(GridViewPageFragment.createInstance(), "Grid View");
+        pagerAdapter.addFragment(ListViewPageFragment.createInstance(), "List View");
+        pagerAdapter.addFragment(GridViewPageFragment.createInstance(), "Grid View");
+
         viewPager.setAdapter(pagerAdapter);
     }
 

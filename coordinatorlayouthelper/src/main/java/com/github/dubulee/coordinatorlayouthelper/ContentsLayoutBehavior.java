@@ -78,9 +78,9 @@ public class ContentsLayoutBehavior extends ViewOffsetBehavior {
     }
 
     private static HeaderLayout findHeaderLayout(List<View> views) {
-        int i = 0;
+        int z = views.size();
 
-        for (int z = views.size(); i < z; ++i) {
+        for (int i = 0; i < z; ++i) {
             View view = (View) views.get(i);
             if (view instanceof HeaderLayout) {
                 return (HeaderLayout) view;
