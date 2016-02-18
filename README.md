@@ -10,11 +10,11 @@ Feel free to use it all you want in your Android apps provided that you cite thi
 Download
 --------
 
-Current version: [0.1.2]
+Current version: [0.1.3]
 
 Gradle:
 ```groovy
-compile 'com.github.dubulee:coordinatorlayouthelper:0.1.2'
+compile 'com.github.dubulee:coordinatorlayouthelper:0.1.3'
 ```
 
 ScreenShot
