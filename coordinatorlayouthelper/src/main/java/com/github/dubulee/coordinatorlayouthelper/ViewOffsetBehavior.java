@@ -6,8 +6,8 @@ import android.util.AttributeSet;
 import android.view.View;
 /**
  * ViewOffsetBehavior.java
- * Created by DUBULEE on 2015/12/27.
- * Copyright (c) DUBULEE. All rights reserved.
+ * Created by mugku on 2015/12/27.
+ * Copyright (c) mugku. All rights reserved.
  */
 public class ViewOffsetBehavior<V extends View> extends CoordinatorLayout.Behavior<V> {
     private ViewOffsetHelper mViewOffsetHelper;
