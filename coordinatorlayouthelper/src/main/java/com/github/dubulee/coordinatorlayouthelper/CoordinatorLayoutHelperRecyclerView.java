@@ -7,8 +7,8 @@ import android.util.AttributeSet;
 
 /**
  * CoordinatorLayoutHelperRecyclerView.java
- * Created by DUBULEE on 2015/12/27.
- * Copyright (c) DUBULEE. All rights reserved.
+ * Created by mugku on 2015/12/27.
+ * Copyright (c) mugku. All rights reserved.
  */
 public class CoordinatorLayoutHelperRecyclerView extends RecyclerView {
     public CoordinatorLayoutHelperRecyclerView(Context context) {
