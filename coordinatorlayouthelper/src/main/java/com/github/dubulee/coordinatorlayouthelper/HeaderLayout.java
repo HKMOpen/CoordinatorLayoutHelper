@@ -7,8 +7,8 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 /**
  * HeaderLayout.java
- * Created by DUBULEE on 2015/12/27.
- * Copyright (c) DUBULEE. All rights reserved.
+ * Created by mugku on 2015/12/27.
+ * Copyright (c) mugku. All rights reserved.
  */
 public class HeaderLayout extends LinearLayout {
     private int mFixedRange = 0;
