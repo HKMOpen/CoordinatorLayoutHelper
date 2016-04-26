@@ -16,8 +16,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 /**
  * HeaderLayoutBehavior.java
- * Created by DUBULEE on 2015/12/27.
- * Copyright (c) DUBULEE. All rights reserved.
+ * Created by mugku on 2015/12/27.
+ * Copyright (c) mugku. All rights reserved.
  */
 public class HeaderLayoutBehavior<V extends View> extends ViewOffsetBehavior<HeaderLayout> {
     private static final String TAG = HeaderLayoutBehavior.class.getSimpleName();
