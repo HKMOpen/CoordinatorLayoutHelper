@@ -1,44 +1,42 @@
-<android.support.design.widget.CoordinatorLayout
-    android:id="@+id/coordinatorLayout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!-- Header 영역 -->
-    <com.github.dubulee.coordinatorlayouthelper.HeaderLayout
+
+    <LinearLayout
         android:id="@+id/header_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_behavior="com.github.dubulee.coordinatorlayouthelper.HeaderLayoutBehavior">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/layout_base"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:background="@android:color/holo_blue_bright">
+
             <TextView
                 android:id="@+id/text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginLeft="10dp"
                 android:gravity="start|center_vertical"
-                android:layout_centerInParent="true"
-                android:textSize="20dp"
-                android:text= "Header Layout"/>
+                android:text="Header Layout"
+                android:textSize="20dp" />
         </RelativeLayout>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/tab_height"/>
-    </com.github.dubulee.coordinatorlayouthelper.HeaderLayout>
+            android:layout_height="@dimen/tab_height" />
 
-    <!-- Contents 영역 -->
-    <com.github.dubulee.coordinatorlayouthelper.CoordinatorLayoutHelperViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="com.github.dubulee.coordinatorlayouthelper.ContentsLayoutBehavior">
-    </com.github.dubulee.coordinatorlayouthelper.CoordinatorLayoutHelperViewPager>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
 </android.support.design.widget.CoordinatorLayout>

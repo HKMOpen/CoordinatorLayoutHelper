@@ -1,17 +1,13 @@
 package com.github.dubulee.coordinatorlayouthelpersample;
 
 import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-
-import com.github.dubulee.coordinatorlayouthelper.CoordinatorLayoutHelperViewPager;
-import com.github.dubulee.coordinatorlayouthelper.HeaderLayout;
-import com.github.dubulee.coordinatorlayouthelper.HeaderLayoutBehavior;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,21 +20,15 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        
-        HeaderLayout headerLayout = (HeaderLayout) findViewById(R.id.header_layout);
 
-        CoordinatorLayoutHelperViewPager viewPager = (CoordinatorLayoutHelperViewPager) findViewById(R.id.viewpager);
+        LinearLayout headerLayout = (LinearLayout) findViewById(R.id.header_layout);
+
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
         setupViewPager(viewPager);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager);
-        headerLayout.setFixedScrollRange((int) getResources().getDimension(R.dimen.tab_height));
-
-        HeaderLayoutBehavior headerLayoutBehavior = (HeaderLayoutBehavior) ((CoordinatorLayout.LayoutParams) headerLayout.getLayoutParams()).getBehavior();
-
-        headerLayoutBehavior.setScrollRootViewPosition(CONTENTS_VIEW_POSITION);
-//        headerLayoutBehavior.setScrollViewPosition(SCROLL_VIEW_POSITION);
     }
 
     private void setupViewPager(ViewPager viewPager) {
